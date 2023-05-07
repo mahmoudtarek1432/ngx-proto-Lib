@@ -66,8 +66,8 @@ export class ProtoWrapper{
      * @returns A promise protoMessage, use toObject To access the type members
      */
     Decode<T>(encodedMessage:Uint8Array):T{
-        let decoded = this.prototype!.decode(encodedMessage) as T;
-        return decoded;
+        let decoded = this.prototype!.decode(encodedMessage)as unknown;
+        return decoded as T;
     }
 }
 

@@ -3,6 +3,8 @@ import { Observable, Subject } from 'rxjs';
 import { IResponse } from '../../helper/Endpoint Managment/model/IResponse';
 import { IEndpoint } from '../Interface/IResponseEndpoint';
 import { EndpointsSubjects } from '../../helper/Subject/Endpoints-Subjects';
+import { IRequest } from '../../public-api';
+import { dummy } from './Dummy';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +12,8 @@ import { EndpointsSubjects } from '../../helper/Subject/Endpoints-Subjects';
 export class RequestEndpointResolver extends IEndpoint<any> {
 
   constructor(private endpointSubjects: EndpointsSubjects) {
-    let x:any = null
-    super(x);
+    super(dummy); //dummy
+    
    }
 
   override handle(responseObj: any){
