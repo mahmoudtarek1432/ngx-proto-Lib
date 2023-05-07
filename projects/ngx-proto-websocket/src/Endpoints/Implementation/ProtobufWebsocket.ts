@@ -4,8 +4,9 @@ import { ProtoRootProvider } from "../../helper/Protobuf/ProtoRootProvider";
 import { ProtoWrapper } from "../../helper/Protobuf/protowrapper";
 import { websocketHelper } from "../../helper/Websocket/WebsocketHelper";
 import { MessageActionFactory } from '../../helper/Websocket/MessageAction/MessageActionFactory';
+import { Injectable } from '@angular/core';
 
-
+@Injectable()
 export class ProtobufWebsocket{
 
     constructor(private protoInstance: ProtoRootProvider){

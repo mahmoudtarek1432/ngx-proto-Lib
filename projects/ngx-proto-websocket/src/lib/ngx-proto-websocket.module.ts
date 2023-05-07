@@ -1,11 +1,9 @@
 import { Injector, NgModule } from '@angular/core';
 import { NgxProtoWebsocketComponent } from './ngx-proto-websocket.component';
-
-import { IRequest } from '../helper/Endpoint Managment/model/IRequest';
-import { IResponse } from '../helper/Endpoint Managment/model/IResponse';
 import { EndpointsSubjects } from '../helper/Subject/Endpoints-Subjects';
 import { ProtoRootProvider } from '../helper/Protobuf/ProtoRootProvider';
 import { ProtobufEndpointBuilder } from '../helper/Protobuf/ProtobufEndpointBuilder';
+import { ProtobufWebsocket } from '../Endpoints/Implementation/ProtobufWebsocket';
 
 
 
@@ -19,6 +17,7 @@ import { ProtobufEndpointBuilder } from '../helper/Protobuf/ProtobufEndpointBuil
     EndpointsSubjects,
     ProtoRootProvider,
     ProtobufEndpointBuilder,
+    ProtobufWebsocket
   ],
   exports: [
     NgxProtoWebsocketComponent,
@@ -31,5 +30,6 @@ export class NgxProtoWebsocketModule {
   constructor(private DIinstance: Injector){
     
     NgxProtoWebsocketModule.injectorInstance = this.DIinstance;
+    
   }
 }
